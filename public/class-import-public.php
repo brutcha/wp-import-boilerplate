@@ -18,7 +18,7 @@
  *
  * @package    Import
  * @subpackage Import/public
- * @author     brtucha <bocek.vojtech@gmail.com>
+ * @author     brutcha <bocek.vojtech@gmail.com>
  */
 class Import_Public {
 

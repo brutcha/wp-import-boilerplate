@@ -19,7 +19,7 @@
  *
  * @package    Import
  * @subpackage Import/includes
- * @author     brtucha <bocek.vojtech@gmail.com>
+ * @author     brutcha <bocek.vojtech@gmail.com>
  */
 class Import_Loader {
 
@@ -116,7 +116,7 @@ class Import_Loader {
 	 */
 	public function run() {
 
-		foreach ( $this->filters as $hook ) {
+        foreach ( $this->filters as $hook ) {
 			add_filter( $hook['hook'], array( $hook['component'], $hook['callback'] ), $hook['priority'], $hook['accepted_args'] );
 		}
 

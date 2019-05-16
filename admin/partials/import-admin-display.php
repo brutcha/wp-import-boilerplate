@@ -11,6 +11,27 @@
  * @package    Import
  * @subpackage Import/admin/partials
  */
+
+$feed = isset( $_GET['feed'] ) ? $_GET['feed'] : null;
 ?>
 
-<!-- This file should primarily consist of HTML with a little bit of PHP. -->
+<div class="wrap">
+    <h2><?php _e('Available Imports', 'Import') ?></h2>
+
+    <ul>
+        <?php foreach ( $drivers as $driver ) :
+            $driver_name = $driver['name']; ?>
+
+            <a
+                href="<?= sprintf('%s&feed=%s', $this->base_URI, $driver_name) ?>"
+                class="button<?= $driver_name === $feed ? ' button-primary' : '' ?>"
+            >
+                <?= $driver_name ?>
+            </a>
+        <?php endforeach; ?>
+    </ul>
+
+    <?php if ( $feed ): ?>
+        <?php $this->process( $feed ) ?>
+    <?php endif; ?>
+</div>

@@ -22,7 +22,7 @@
  * @since      1.0.0
  * @package    Import
  * @subpackage Import/includes
- * @author     brtucha <bocek.vojtech@gmail.com>
+ * @author     brutcha <bocek.vojtech@gmail.com>
  */
 class Import_i18n {
 

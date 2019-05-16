@@ -25,7 +25,7 @@
  * @since      1.0.0
  * @package    Import
  * @subpackage Import/includes
- * @author     brtucha <bocek.vojtech@gmail.com>
+ * @author     brutcha <bocek.vojtech@gmail.com>
  */
 class Import {
 
@@ -72,7 +72,7 @@ class Import {
 		} else {
 			$this->version = '1.0.0';
 		}
-		$this->plugin_name = 'import';
+		$this->plugin_name = 'Import';
 
 		$this->load_dependencies();
 		$this->set_locale();
@@ -156,6 +156,8 @@ class Import {
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
+        $this->loader->add_action( 'admin_menu', $plugin_admin, 'menu');
+        $this->loader->add_action( 'wp_ajax_driver_run', $plugin_admin, 'driver_run' );
 
 	}
 

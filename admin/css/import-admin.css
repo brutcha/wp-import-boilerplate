@@ -2,3 +2,45 @@
  * All of the CSS for your admin-specific functionality should be
  * included in this file.
  */
+
+#feed__info,
+.feed__controll {
+    width: 100%;
+}
+
+.feed__progress,
+.feed__name,
+.feed__progress-bar, 
+.feed__progress-status {
+    height: 40px;
+    line-height: 40px;
+}
+
+
+.feed__progress{
+    position: relative;
+    display: flex;
+}
+
+.feed__progress--loading {
+    display: none;
+}
+
+.feed__name {
+    flex: 0 0 auto;
+    padding: 0 20px;
+    background: darkgrey;
+}
+
+.feed__progress-bar {
+    flex: 1 1 auto;
+}
+
+.feed__progress-status {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 20px;
+    color: white;
+    font-weight: bold;
+}
